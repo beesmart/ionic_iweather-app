@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-grid>
+		<ion-row>
+			<ion-col width-100>
+				<ion-list>
+					<ion-list-header>
+					  <ion-label><strong>All Settings</strong></ion-label>
+					</ion-list-header>
+					<form (ngSubmit)="saveForm()">
+						<ion-item>
+							<ion-label fixed>
+								City
+							</ion-label>
+							<ion-input [(ngModel)]="city" name="city" type="text"></ion-input>
+						</ion-item>
+						<ion-item>
+							<ion-label fixed>
+								Country
+							</ion-label>
+							<ion-input [(ngModel)]="country" name="country" type="text"></ion-input>
+						</ion-item>
+						<ion-button expand="block" type="submit" block>Save Changes</ion-button>
+					</form>
+					
+					
+				</ion-list>
+			</ion-col>
+		</ion-row>
+			
+	</ion-grid>	
+
+</ion-content>
+

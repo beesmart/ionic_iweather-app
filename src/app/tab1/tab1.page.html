@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      iWeather
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-grid *ngIf="weatherObj">
+      <ion-row>
+        <ion-col width-50 offset-25>
+          <h2 class="location">{{ weatherObj.name }}</h2>
+          <div class="icon"><img src="http://openweathermap.org/img/w/{{ weatherObj.weather[0].icon }}.png" alt="weather-icon"></div>
+          <h3 class="desc">{{ weatherObj.weather[0].description }}</h3>
+          <h1 class="temp">{{ weatherObj.main.temp }}&deg;</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row class="list-card">
+        <ion-col width-100>
+          <ion-list>
+            <ion-item>
+              <strong>Temp: </strong> {{ weatherObj.main.temp }}&deg;
+            </ion-item>
+            <ion-item>
+              <strong>Humidity: </strong> {{ weatherObj.main.humidity }}&deg;
+            </ion-item>
+            <ion-item>
+              <strong>Visibility: </strong> {{ weatherObj.visibility }}&deg;
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>  
+
+</ion-content>
